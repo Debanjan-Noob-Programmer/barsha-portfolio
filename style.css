@@ -46,3 +46,149 @@ body{
 body .total-form{
     background-color: rgb(218, 233, 239);
 }
+
+
+
+/* For Responsive Design */
+
+@media only screen and (max-width: 750px) {
+    /* Stack everything vertically */
+    .main-part {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* Image full width */
+    .main-part .image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Text below image */
+    .main-part .details {
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    /* Carousel below text */
+    .another-slider {
+        margin-left: 0;
+        margin-top: 30px;
+        max-width: 100%;
+    }
+
+    .another-slider img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Navbar spacing fix for mobile */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        padding-left: 0;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+ /* Service.html fix responsive */
+ @media only screen and (max-width: 750px) {
+
+    /* -------- SERVICES CARDS -------- */
+
+    .services-total-container {
+        padding: 15px;
+    }
+
+    .all-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .all-cards .card {
+        width: 90% !important;   /* responsive card width */
+        max-width: 320px;
+    }
+
+    .services-total-container .card-img-top {
+        height: auto;
+        max-height: 180px;
+        object-fit: cover;
+    }
+
+    /* -------- NAIL GALLERY / CAROUSEL -------- */
+
+    .nail-gallery h2 {
+        font-size: 1.4rem;
+        margin-top: 20px;
+    }
+
+    .nail-gallery .another-slider {
+        max-width: 90%;
+        padding: 0 10px;
+    }
+
+    /* Show ONE image per row on mobile */
+    .nail-gallery .carousel-item .row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .nail-gallery .carousel-item .col-4 {
+        width: 100%;
+    }
+
+    .nail-gallery img {
+        /* width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3); */
+        width: 90%;              /* smaller than full width */
+        max-width: 300px;        /* prevents over-scaling */
+        margin: auto;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Smooth carousel controls */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-size: 60%;
+    }
+    /* Added later */
+    /* FORCE center carousel container on Services page */
+    .services-total-container .nail-gallery .another-slider {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 30px;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Center the carousel itself */
+    .services-total-container .carousel {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    /* Center images perfectly */
+    .services-total-container .carousel img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
